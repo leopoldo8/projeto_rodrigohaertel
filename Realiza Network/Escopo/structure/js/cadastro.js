@@ -70,4 +70,29 @@ $("form").on("submit", function () {
 		}
 		return false;
 	}
+
+	var data = {
+		first_name: nome,
+		last_name: sobrenome,
+		email: email,
+		age: idade,
+		cpf: cpf,
+		cep: cep,
+		address: endereco,
+		password: senha
+	}
+
+	$.ajax({
+		type: 'post',
+		url:"http://192.168.20.91:8085/register",
+		data: data,
+		success: function(res){
+			alert("Registrado com sucesso!");
+			$("form")[0].reset();
+		},
+		error: function(erro){
+			alert(xhr.response.JSON.error.message);
+		}
+	});
+	return false
 });

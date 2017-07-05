@@ -107,7 +107,7 @@ form {
 	box-shadow: 0px 1px 10px 2px #F44336 !important;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
 	body {
 		margin-bottom: 80px;
 	}
