@@ -1,0 +1,103 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	color: #444444;
+	font-weight: 400;
+	background-color: #F9F9F9;
+	line-height: 25px;
+}
+
+#header {
+	background-color: #e4d539;
+	display: flex;
+	flex-wrap: wrap;
+	height: 60px;
+	padding-left: 50px;
+	margin-bottom: 30px;
+}
+
+#header h1 , #header img {
+	align-self: center;
+}
+
+#header h1 {
+	margin-left: 8px;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+#cont {
+	margin: 0 auto;
+	width: 820px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#feeds {
+	box-shadow: initial!important;
+	margin-bottom: 0!important;
+	border-radius: 0!important;
+	padding: 0!important;
+	box-sizing: content-box!important;
+}
+
+#cont > div , .feed {
+	box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.15);
+	margin-bottom: 50px;
+	border-radius: 10px;
+	padding: 20px 25px;
+	box-sizing: border-box;
+}
+
+#inf {
+	width: 330px;
+	margin-right: 20px;
+	font-weight: 400;
+	height: 320px;
+}
+
+#perf {
+	display: flex;
+	flex-direction: column;
+	font-size: 19px;
+	text-align: center;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+	margin-bottom: 15px;
+	padding-bottom: 5px; 
+}
+
+#imgperfil {
+	margin: 20px 0;
+	align-self: center;
+	display: flex;
+	justify-content: center;
+	width: 120px;
+	height: 120px;
+	border-radius: 60px;
+	background-color: #e4d539;
+}
+
+#imgperfil h1 {
+	align-self: center;
+	font-size: 50px;
+}
+
+#conf {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#post {
+	width: 470px;
+	height: 320px;
+}
+
+#post textarea {
+	width: 400px;
+	height: 175px;
+	border-style: none;
+	resize: none;
+	background: rgb(234, 234, 234);
+	border-radius: 10px;
+}
