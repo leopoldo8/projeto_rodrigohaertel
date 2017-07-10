@@ -1,0 +1,138 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	color: #444444;
+	background-color: #e0e80d;
+	margin-bottom: 80px;
+}
+
+a {
+	color: #444444;
+}
+
+#general {
+	margin: 0 auto;
+	padding: 0;
+	height: 800px;
+}
+
+#header {
+	display: flex;
+	padding-top: 50px;
+	flex-flow: column;
+	align-items: center;
+	margin-bottom: 50px;
+}
+
+.meta {
+	margin-top: 5px;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+
+form {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+#login input , #enviar input {
+	width: 350px;
+	height: 50px;
+	border-radius: 4px;
+	border-style: none;
+	box-shadow: 0px 1px 0px 0.2px rgba(68, 68, 68, 0.1);
+	margin-top: 10px;
+	margin-bottom: 35px;
+	font-size: 18px;
+	padding-left: 15px;
+}
+
+#login h3 {
+	font-size: 19px;
+}
+
+::-webkit-input-placeholder {
+   font-size: 15px;
+   opacity: 0.6;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  font-size: 14px;
+  padding-left: 15px;
+  opacity: 0.6;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  font-size: 14px;
+  padding-left: 15px;
+  opacity: 0.6;
+}
+
+:-ms-input-placeholder {
+  font-size: 14px;
+  padding-left: 15px;
+  opacity: 0.6;
+}
+
+#enviar input {
+	background-color: #b4bb07;
+	color: white;
+	width: 250px;
+	height: 60px;
+	box-shadow: 0px 1px 0px 0.2px rgba(68, 68, 68, 0.5);
+	margin-top: 15px;
+}
+
+#registrese {
+	margin-top: 40px;
+	text-align: center;
+	font-size: 21px;
+	color: rgba(68, 68, 68, 0.5);
+	padding-bottom: 75px;
+}
+
+#footer {
+	background-color: white;
+	position: absolute;
+	right: 0;
+	left: 0;
+	padding-top: 50px;
+	text-align: center;
+	height: 80px;
+}
+
+.erro {
+	box-shadow: 0px 1px 10px 2px #F44336 !important;
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		margin-bottom: 80px;
+	}
+
+	#general {
+		width: 300px;
+	}
+
+	#login input {
+		width: 120%;
+	}
+
+	#login {
+		margin-left: -60px;
+	}
+	
+	span {
+		display: block;
+	}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	#footer {
+		position: fixed;
+		bottom: 0;
+	}
+}
