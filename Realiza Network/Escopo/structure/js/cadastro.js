@@ -84,13 +84,13 @@ $("form").on("submit", function () {
 
 	$.ajax({
 		type: 'post',
-		url:"http://192.168.20.91:8085/register",
+		url:"http://realizadigital-api.nodo.cc/register",
 		data: data,
 		success: function(res){
 			alert("Registrado com sucesso!");
 			$("form")[0].reset();
 		},
-		error: function(erro){
+		error: function(xhr){
 			alert(xhr.response.JSON.error.message);
 		}
 	});

@@ -30,10 +30,14 @@ $("form").on("submit", function (e) {
 
 	$.ajax({
 		type: 'post',
-		url:"http://192.168.20.91:8085/login",
+		url:"http://realizadigital-api.nodo.cc/login",
 		data: data,
 		success: function(res){
 			alert("Logado com sucesso!");
+			var userData = res;
+			userData.password = data.password;
+			localStorage.setItem('userData', JSON.stringify(userData));
+			window.location = "home.html";
 		},
 		error: function(xhr){
 			alert(xhr.responseJSON.error.message);
