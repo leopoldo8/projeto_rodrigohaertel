@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +6,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 	<title>Realiza Digital Social Network</title>
 	<!-- CSS -->
+	<script type="text/javascript" src="js/verif.js"></script>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/home.css">
 	<!-- // CSS -->
@@ -16,8 +16,13 @@
 	<!-- CONTENT -->
 	<div id="general">
 		<div id="header">
-			<img src="img/logo-small.png">
-			<h1>Realiza Digital</h1>
+			<span id="up">
+				<img src="img/logo-small.png">
+				<h1>Social Network</h1>
+			</span>
+			<div class="exit">
+				<img width="25px" src="img/icon-exit.png">
+			</div>
 		</div>
 		<div id="cont">
 			<div id="inf">
@@ -28,14 +33,14 @@
 					</div>
 				</div>
 				<p><span class="emailperfil">vinicius.marques@nodo.cc</span></p>
-				<p><span class="idadeperfil">32 anos</span></p>
+				<p><span class="idadeperfil">32</span> anos</p>
 				<div class="lasticon">
 					<img src="img/icon-edit.png">
 				</div>
 			</div>
 			<div id="post">
 				<h2>Publicar:</h2>
-				<form id="post">
+				<form id="postar">
 					<textarea rows="10"></textarea>
 					<div class="lasticon">
 						<input type="submit" value="ENVIAR">
