@@ -8,8 +8,72 @@ function loadUserData() {
 	$(".idadeperfil").text(userData.age);
 };
 
+function loadFeeds() {
+	var wrapper = $("#feeds");
+	user_id = userData.id;
+	$.ajax({
+		url: "http://realizadigital-api.nodo.cc/feeds/"+user_id,
+		type: 'get',
+		success: function(res) {
+			var posts = res.posts;
+			var html = "";
+			if (posts.length == 0) {
+				html = "<div class='feed'><p>Não há novos posts no momento.</p></div>";
+			} else {
+				posts.reverse();
+				for (i=0; i<posts.length; i++) {
+					if (posts[i].liked) {
+						src = "img/icon-like-active.png";
+					} else {
+						src = "img/icon-like.png";
+					}
+					html += "<div class='feed'><div class='feed_inf'><span class='name'>"+posts[i].first_name+" "+posts[i].last_name+"</span></div><p class='feed_text'>"+posts[i].text+"</p><div class='lasticon'><span class='likes'>"+posts[i].likes+"</span><img src='"+src+"'></div></div>";
+				}
+			}
+			wrapper.html(html);
+		}
+	});
+}
+
+$(".exit img").on("click", function sair() {
+	localStorage.removeItem('userData');
+	window.location = "login.html";	
+});
+
+$("#up").on("click", function() {$("html, body").animate({ scrollTop: 0 }, "slow"); return false;});
+
+$("#postar").on("submit", function postar() {
+	var texto = $("textarea").val();
+	var email = userData.email;
+	var password = userData.password;
+	if (texto == "") {
+		$("textarea").addClass("texterro");
+		return false;
+	} else if (texto.length > 200) {
+		alert("Sua publicação excede o limite de 200 caracteres.");
+		return false;
+	} else {
+		$("textarea").removeClass("texterro");
+	}
+	$.ajax({
+		type: "post",
+		url: "http://realizadigital-api.nodo.cc/feed",
+		data: {
+			text: texto,
+			email: email,
+			password: password
+		},
+		success: function (res) {
+			loadFeeds();
+			$("textarea").val("");
+		}
+	});
+	return false;
+});
+
 function init() {
 	loadUserData();
+	loadFeeds();
 }
 
 init();

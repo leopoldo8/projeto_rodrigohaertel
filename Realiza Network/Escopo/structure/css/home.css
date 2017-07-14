@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-	padding: 0;
+	padding: 60px 0 0 0;
 	font-family: 'Open Sans', sans-serif;
 	color: #444444;
 	font-weight: 600;
@@ -10,16 +10,28 @@ body {
 }
 
 #header {
-	background-color: #e4d539;
-	display: flex;
-	flex-wrap: wrap;
+	background-color: #e6da46;
 	height: 60px;
 	padding-left: 50px;
-	margin-bottom: 30px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
 }
 
 #header h1 , #header img {
 	align-self: center;
+}
+
+#up {
+	display: flex;
+	height: 60px;
+	cursor: pointer;
+	width: 184px;
+}
+
+.texterro {
+	border: 1px solid red!important;
 }
 
 #header h1 {
@@ -27,9 +39,27 @@ body {
 	font-size: 20px;
 }
 
+.exit {
+	position: absolute;
+	right: 50px;
+	top: 20px;
+}
+
+.exit img {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.exit img:hover {
+	opacity: 1;
+}
+
 #cont {
 	margin: 0 auto;
 	width: 920px;
+}
+
+#sup {
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -42,7 +72,7 @@ body {
 	box-sizing: content-box!important;
 }
 
-#cont > div , .feed {
+#cont > div > div {
 	box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.15);
 	margin-bottom: 50px;
 	border-radius: 10px;
@@ -74,7 +104,7 @@ body {
 	width: 120px;
 	height: 120px;
 	border-radius: 60px;
-	background-color: #e4d539;
+	background-color: #e6da46;
 }
 
 #imgperfil h1 {
@@ -153,9 +183,12 @@ textarea::-webkit-scrollbar {
 	margin-right: 10px;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 920px) {
 	#cont {
 		width: 90%;
+	}
+
+	#sup {
 		flex-flow: column;
 	}
 
@@ -166,7 +199,12 @@ textarea::-webkit-scrollbar {
 
 @media screen and (max-width: 425px) {
 	#header {
+		display: flex;
 		justify-content: center;
 		padding: 0;
+	}
+
+	.exit {
+		right: 5px;
 	}
 }

@@ -2,6 +2,9 @@ jQuery(function($){
 	$("#cpf").mask("999.999.999-99");
 	$("#cep").mask("99999-999");
 });
+$("#logo").on("click", function log() {
+	window.location = "login.html";
+})
 $("form").on("submit", function () {
 	var nome = $("#nome").val();
 	var sobrenome = $("#sobrenome").val();
@@ -89,6 +92,7 @@ $("form").on("submit", function () {
 		success: function(res){
 			alert("Registrado com sucesso!");
 			$("form")[0].reset();
+			window.location = "login.html"
 		},
 		error: function(xhr){
 			alert(xhr.response.JSON.error.message);
